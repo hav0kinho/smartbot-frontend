@@ -1,0 +1,62 @@
+:root {
+  --red: #ff4501;
+  --gray: #888689;
+  --light-gray: #e3e2e3;
+  --small-size: 12px;
+  --margin_bottom: 15px;
+  --margin_top: 15px;
+  --green-color: #00b39d;
+}
+
+.wrapper {
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.margin_bottom {
+  margin-bottom: var(--margin_bottom);
+}
+
+.margin_top {
+  margin-top: var(--margin_top);
+}
+
+.spacebetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.value {
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.small {
+  font-size: var(--small-size);
+}
+
+.gray {
+  color: var(--gray);
+}
+
+.red {
+  color: var(--red);
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+/*Classes específicas*/
+.negotiated_papers {
+  border-top: 1px solid var(--light-gray);
+}
+
+.paper {
+  background-color: var(--green-color);
+  border-radius: 3px;
+  padding: 3px;
+  font-size: 14px;
+  color: white;
+}
