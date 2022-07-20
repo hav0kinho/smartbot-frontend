@@ -11,9 +11,7 @@ const Principal = () => {
       </div>
       <div className={styles.spacebetween + " " + styles.margin_bottom}>
         <div>
-          <span
-            className={styles.small + " " + styles.gray + " " + styles.test}
-          >
+          <span className={styles.small + " " + styles.gray}>
             Resumo de movimentação
           </span>
           <br />
@@ -24,7 +22,9 @@ const Principal = () => {
             Total de transações realizadas
           </span>
           <br />
-          <span className={styles.value}>443</span>
+          <div className={styles.align_right}>
+            <span className={styles.value}>443</span>
+          </div>
         </div>
       </div>
       <div className={styles.negotiated_papers}>
@@ -33,7 +33,9 @@ const Principal = () => {
             Papéis negociados
           </span>
           <div className={styles.margin_top}>
-            <span className={styles.paper}>WING20</span>
+            <h2 className={styles.paper}>
+              <span>WING20</span>
+            </h2>
           </div>
 
           <div></div>

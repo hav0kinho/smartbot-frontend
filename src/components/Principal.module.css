@@ -48,15 +48,33 @@
   font-weight: bolder;
 }
 
-/*Classes específicas*/
+.align_right {
+  text-align-last: right;
+}
+
+/*=================Classes específicas========================*/
 .negotiated_papers {
   border-top: 1px solid var(--light-gray);
 }
 
 .paper {
+  line-height: 0.1em;
+  margin: 1px 0 20px;
+  background-image: linear-gradient(
+    to right,
+    var(--gray) 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 4px 2px;
+  background-repeat: repeat-x;
+}
+
+.paper span {
   background-color: var(--green-color);
   border-radius: 3px;
   padding: 3px;
+
   font-size: 14px;
   color: white;
 }
