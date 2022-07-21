@@ -3,13 +3,14 @@
   --gray: #888689;
   --light-gray: #e3e2e3;
   --small-size: 12px;
-  --margin_bottom: 15px;
-  --margin_top: 15px;
+  --margin_bottom: 20px;
+  --margin_top: 20px;
   --green-color: #00b39d;
 }
 
 .wrapper {
   background-color: white;
+  margin-top: 20px;
   padding: 15px 25px;
   border-radius: 10px;
 }
@@ -51,7 +52,6 @@
 .align_right {
   text-align-last: right;
 }
-
 /*=================Classes específicas========================*/
 .negotiated_papers {
   border-top: 1px solid var(--light-gray);
@@ -69,12 +69,25 @@
   background-size: 4px 2px;
   background-repeat: repeat-x;
 }
-
-.paper span {
+.paper .paper_name {
   background-color: var(--green-color);
   border-radius: 3px;
   padding: 3px;
-
   font-size: 14px;
   color: white;
+}
+
+.paper div {
+  margin-left: 93%;
+  background-color: white;
+  padding: 0 0px;
+}
+
+.paper .paper_transations span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.test {
+  display: inline;
 }

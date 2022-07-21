@@ -33,9 +33,17 @@ const Principal = () => {
             Papéis negociados
           </span>
           <div className={styles.margin_top}>
-            <h2 className={styles.paper}>
-              <span>WING20</span>
-            </h2>
+            <div className={styles.paper}>
+              <h2 className={styles.test + " " + styles.paper_name}>
+                <span>WING20</span>
+              </h2>
+              <div className={styles.paper_transations}>
+                <span>157</span>
+                <span className={styles.small + " " + styles.gray}>
+                  transaçoes
+                </span>
+              </div>
+            </div>
           </div>
 
           <div></div>

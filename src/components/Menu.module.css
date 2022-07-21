@@ -1,0 +1,57 @@
+:root {
+  --black: #343234;
+  --green-color: #00b39d;
+  --hover-green-color: #008878;
+  --horizontal-bar-color: #dfdfdf;
+}
+
+.green {
+  color: var(--green-color);
+}
+
+.wrapper {
+  background-color: white;
+  margin-top: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: flex;
+
+  flex-direction: row;
+}
+
+.disabled_link {
+  cursor: default;
+  pointer-events: none;
+  text-decoration: none;
+  color: grey;
+}
+
+.nav_icon {
+  border-right: 1px solid var(--horizontal-bar-color);
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+.nav_routes {
+  padding: 10px 20px;
+  vertical-align: middle;
+}
+
+.nav_routes a {
+  text-decoration: none;
+}
+
+.nav_routes_actual a {
+  font-weight: bold;
+  color: var(--black);
+}
+
+.nav_routes_other a {
+  font-weight: bold;
+  color: var(--green-color);
+  transition: 0.2s;
+}
+
+.nav_routes_other a:hover {
+  color: var(--hover-green-color);
+}

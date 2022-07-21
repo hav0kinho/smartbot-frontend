@@ -1,0 +1,53 @@
+:root {
+  --light-gray: #e3e2e3;
+  --gray: #b1b0b2;
+  --green: #00b9a1;
+  --black: #343234;
+}
+
+.add_button {
+  border: none;
+  background-color: white;
+}
+
+.icon_wrapper {
+  padding: 35px 25px;
+  margin: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+  transition: 0.3s;
+}
+
+.icon_wrapper:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.wrapper {
+  background-color: white;
+  margin-top: 20px;
+  display: flex;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.number_green {
+  color: var(--green-color);
+  font-weight: bold;
+}
+
+.robot_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.robot_add_text {
+  font-size: 20px;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.robot_number_text {
+  color: var(--gray);
+}
