@@ -49,12 +49,10 @@ const Overview = (props: Props) => {
         </div>
 
         <div className={styles.negotiated_papers_wrapper}>
-          <Paper />
-          <Paper />
-          <Paper />
-          <Paper />
-          <Paper />
-          <Paper />
+          {props.overviewData &&
+            props.overviewData.papers.map((paper, i) => (
+              <Paper key={i} paperPropeties={paper} />
+            ))}
         </div>
       </div>
     </section>

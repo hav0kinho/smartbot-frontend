@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+
+.overviewWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.dailyTrades {
+  text-align: end;
+}
+
+.papersWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgb(197, 197, 197);
+}
+
+.paper {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-device-width: 480px) {
+  .overviewWrapper {
+    flex-direction: column;
+  }
+  .dailyTrades {
+    text-align: start;
+  }
+  .dailyMovimetation {
+    margin-bottom: 20px;
+  }
+  .papersWrapper {
+    flex-direction: column;
+  }
+}

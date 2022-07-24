@@ -1,15 +1,22 @@
 import React from "react";
+import IPaper from "../interfaces/IPaper";
 import styles from "./Paper.module.css";
+//Interfaces
 
-type Props = {};
+type Props = {
+  paperPropeties: IPaper;
+};
 
 const Paper = (props: Props) => {
   return (
     <article className={styles.paper_wrapper}>
-      <div className={styles.paper_name}>WING20</div>
+      <div className={styles.paper_name}>{props.paperPropeties.name}</div>
       <div className={styles.divider}></div>
       <div className={styles.paper_transations}>
-        <span className={styles.bolder}>157</span> transações
+        <span className={styles.bolder}>
+          <>{props.paperPropeties.trasactions}</>
+        </span>{" "}
+        transações
       </div>
     </article>
   );

@@ -1,0 +1,64 @@
+.wrapper {
+  width: var(--robot-width);
+  background-color: white;
+  margin-top: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerWrapper .rightCol {
+  display: flex;
+  align-items: center;
+}
+
+.executionCircle {
+  margin-right: 10px;
+}
+
+/*Propriedades*/
+.propetiesWrapper {
+  display: flex;
+}
+
+.propetiesWrapper div {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+/*Paper Wrapper*/
+.paperWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid rgb(194, 194, 194);
+  border-radius: 4px;
+}
+
+.paperPosition {
+  margin-right: 20px;
+}
+
+.paperWrapper .leftCol {
+  display: flex;
+}
+
+.paperWrapper .rightCol {
+  text-align: end;
+}
+/*Footer propeties wrapper*/
+.footerPropetiesWrapper {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.footerPropetiesWrapper .dailyTrades {
+  text-align: end;
+}

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.green {
+  color: var(--green-color);
+}
+
+.red {
+  color: var(--red);
+}
+
+.wrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 100px;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  box-shadow: -1px 2px 5px black;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonWrapper {
+  margin-top: 20px;
+}
+
+.continueButtonGreen {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: var(--green);
+  color: white;
+  transition: 0.5s;
+}
+
+.continueButtonGreen:hover {
+  background-color: #008575;
+}
+
+.continueButtonRed {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: var(--red);
+  color: white;
+  transition: 0.5s;
+}
+
+.continueButtonRed:hover {
+  background-color: #b83100;
+}

@@ -71,3 +71,8 @@
 .test {
   display: inline;
 }
+@media screen and (max-device-width: 480px) {
+  .negotiated_papers_wrapper {
+    flex-direction: column;
+  }
+}

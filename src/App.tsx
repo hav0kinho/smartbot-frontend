@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 //=====================Style=====================
 import "./App.css";
-import * as ReactBootStrap from "react-bootstrap";
 //===================Components==================
 import Overview from "./components/Overview";
 import Menu from "./components/Menu";
 import Robot from "./components/Robot";
 import RobotAdd from "./components/RobotAdd";
 import RobotList from "./components/RobotList";
+//Skeleton
+import RobotSkeleton from "./components/Skeletons/RobotSkeleton";
+import OverviewSkeleton from "./components/Skeletons/OverviewSkeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 //===================Interfaces==================
 import IRobot from "./interfaces/IRobot";
 import IOverview from "./interfaces/IOverview";
@@ -49,14 +52,14 @@ function App() {
 
   return (
     <div className="App">
-      <>{console.log(robotList)}</>
       {isModalOpen && <RobotModal modalSetter={setIsModalOpen} />}
       <Menu />
-      {loadingOverview && <p>Loading...</p>}
+      {loadingOverview && <OverviewSkeleton />}
       {!loadingOverview && overview && <Overview overviewData={overview} />}
       <RobotAdd robotQtd={3} modalSetter={setIsModalOpen} />
 
       <section className="robot_wrapper">
+        {loadingRobots && <RobotSkeleton />}
         {robotList && <RobotList robots={robotList} />}
       </section>
     </div>

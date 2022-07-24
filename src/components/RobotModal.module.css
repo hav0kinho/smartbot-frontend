@@ -157,3 +157,19 @@
 .createRobotButton:hover {
   background-color: var(--dark-green);
 }
+
+.createRobotCircle {
+  margin-right: 5px;
+}
+
+.submiting {
+  font-weight: bold;
+}
+
+.disabledDiv {
+  pointer-events: none;
+}
+
+.enabledDiv {
+  pointer-events: all;
+}
