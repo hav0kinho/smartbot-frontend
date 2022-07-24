@@ -1,0 +1,49 @@
+:root {
+  --papers_negotiated_columns: 2;
+}
+
+.small {
+  font-size: var(--small-size);
+}
+.bolder {
+  font-weight: bolder;
+}
+
+.gray {
+  color: var(--gray);
+}
+.margin_top {
+  margin-top: 15px;
+}
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+.paper_wrapper {
+  display: flex;
+  column-gap: 5px;
+  width: calc(80% / var(--papers_negotiated_columns));
+  margin: 5px 0;
+  align-items: center;
+}
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 2px dotted var(--light-gray);
+}
+
+.paper_transations {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.paper_transations span {
+  color: black;
+}
+
+.paper_name {
+  background-color: var(--green-color);
+  border-radius: 3px;
+  text-align: end;
+  padding: 3px 7px;
+  font-size: 14px;
+  color: white;
+}

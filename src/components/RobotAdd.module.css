@@ -18,9 +18,18 @@
   transition: 0.3s;
 }
 
+.icon_wrapper svg {
+  transition: 0.3s;
+}
+
 .icon_wrapper:hover {
   cursor: pointer;
-  border: 1px solid black;
+  border: 5px solid var(--green);
+}
+
+.icon_wrapper:hover > svg {
+  width: 90px;
+  height: 55px;
 }
 
 .wrapper {

@@ -1,0 +1,159 @@
+:root {
+  --color-title: #5f5d60;
+  --green: #00b39d;
+  --background-rgba: rgba(0, 179, 157, 0.7);
+  --dark-green: #009684;
+  --selected: #ff4501;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-GERAL=-=-=-=-=-=-=-=-=-=-*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-rgba);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalBackground:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalContainer {
+  width: 440px;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+}
+
+.modalContainer h3 {
+  font-weight: 600;
+  margin: 20px 0;
+}
+/*=-=-=-=-=-=-=-=-=-=-Header=-=-=-=-=-=-=-=-=-=-*/
+.modalHeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7px;
+}
+.addRobotText {
+  font-weight: 500;
+}
+.closeButton {
+  cursor: pointer;
+  background: none;
+  font-size: 16px;
+  border: none;
+  transition: 0.3s;
+}
+
+.closeButton:hover {
+  color: var(--selected);
+}
+
+/*=-=-=-=-=-=-=-=-=-=-Title=-=-=-=-=-=-=-=-=-=-*/
+.modalTitleContainer {
+  text-align: start;
+  margin: 20px 0;
+}
+
+.modalTitleContainer h2 {
+  color: var(--color-title);
+  font-size: 32px;
+}
+
+.modalTitleContainer span {
+  font-size: 12px;
+  color: gray;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-Form=-=-=-=-=-=-=-=-=-=-*/
+.modalFormContainer {
+}
+
+.modalFormContainer form {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.formLabelInput {
+  padding: 10px 0;
+}
+
+.modalFormContainer form input {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #e3e2e3;
+  color: var(--color-title);
+  border-radius: 2px;
+}
+
+.modalFormStrategiesContainer {
+  display: flex;
+  flex-direction: column;
+}
+.modalFormStrategiesContainer input[type="radio"] {
+  display: none;
+}
+
+.formLabelRadio {
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+}
+
+.modalFormStrategiesContainer input:checked + label {
+  color: white;
+  border: none;
+  font-weight: bold;
+  background-color: var(--selected);
+  transition: background 0.5s;
+}
+/*=-=-=-=-=-=-=-=-=-=-Buttons=-=-=-=-=-=-=-=-=-=-*/
+.modalButtonsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.cancelButton {
+  cursor: pointer;
+  padding: 7px 18px;
+  color: gray;
+  border: 1px solid gray;
+  border-radius: 2px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.cancelButton:hover {
+  background-color: gray;
+  color: white;
+}
+
+.createRobotButton {
+  cursor: pointer;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 2px;
+  background-color: var(--green);
+  color: white;
+  transition: 0.3s;
+}
+
+.createRobotButton:hover {
+  background-color: var(--dark-green);
+}

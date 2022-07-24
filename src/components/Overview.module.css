@@ -45,6 +45,10 @@
   color: var(--red);
 }
 
+.margin_top_bottom {
+  margin: 15px 0;
+}
+
 .bolder {
   font-weight: bolder;
 }
@@ -57,35 +61,11 @@
   border-top: 1px solid var(--light-gray);
 }
 
-.paper {
-  line-height: 0.1em;
-  margin: 1px 0 20px;
-  background-image: linear-gradient(
-    to right,
-    var(--gray) 33%,
-    rgba(255, 255, 255, 0) 0%
-  );
-  background-position: bottom;
-  background-size: 4px 2px;
-  background-repeat: repeat-x;
-}
-.paper .paper_name {
-  background-color: var(--green-color);
-  border-radius: 3px;
-  padding: 3px;
-  font-size: 14px;
-  color: white;
-}
-
-.paper div {
-  margin-left: 93%;
-  background-color: white;
-  padding: 0 0px;
-}
-
-.paper .paper_transations span {
-  font-weight: bold;
-  margin-right: 5px;
+.negotiated_papers_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .test {

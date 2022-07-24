@@ -1,9 +1,15 @@
 import React from "react";
 import { TypeFlags } from "typescript";
+import IOverview from "../interfaces/IOverview";
 //Style
-import styles from "./Principal.module.css";
+import styles from "./Overview.module.css";
+import Paper from "./Paper";
 
-const Principal = () => {
+type Props = {
+  overviewData: IOverview;
+};
+
+const Overview = (props: Props) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.margin_bottom}>
@@ -15,7 +21,13 @@ const Principal = () => {
             Resumo de movimentação
           </span>
           <br />
-          <span className={styles.value + " " + styles.red}>R$220,00</span>
+          <span className={styles.value + " " + styles.red}>
+            <>
+              {props.overviewData.moviment_summary < 0
+                ? "-R$" + Math.abs(props.overviewData.moviment_summary)
+                : props.overviewData.moviment_summary}
+            </>
+          </span>
         </div>
         <div>
           <span className={styles.small + " " + styles.gray}>
@@ -23,34 +35,30 @@ const Principal = () => {
           </span>
           <br />
           <div className={styles.align_right}>
-            <span className={styles.value}>443</span>
+            <span className={styles.value}>
+              {props.overviewData.transactions}
+            </span>
           </div>
         </div>
       </div>
       <div className={styles.negotiated_papers}>
-        <div className={styles.margin_top}>
+        <div className={styles.margin_top_bottom}>
           <span className={styles.small + " " + styles.gray}>
             Papéis negociados
           </span>
-          <div className={styles.margin_top}>
-            <div className={styles.paper}>
-              <h2 className={styles.test + " " + styles.paper_name}>
-                <span>WING20</span>
-              </h2>
-              <div className={styles.paper_transations}>
-                <span>157</span>
-                <span className={styles.small + " " + styles.gray}>
-                  transaçoes
-                </span>
-              </div>
-            </div>
-          </div>
+        </div>
 
-          <div></div>
+        <div className={styles.negotiated_papers_wrapper}>
+          <Paper />
+          <Paper />
+          <Paper />
+          <Paper />
+          <Paper />
+          <Paper />
         </div>
       </div>
     </section>
   );
 };
 
-export default Principal;
+export default Overview;

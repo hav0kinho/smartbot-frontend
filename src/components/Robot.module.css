@@ -9,11 +9,12 @@
   --small-size: 12px;
   --margin_bottom: 15px;
   --margin_top: 15px;
+  --robot-width: 380px;
   --green-color: #00b39d;
 }
 
 .wrapper {
-  width: 330px;
+  width: var(--robot-width);
   background-color: white;
   margin-top: 20px;
   padding: 15px 25px;
@@ -66,6 +67,16 @@
   color: var(--normal-gray);
 }
 
+.robot_circle_red {
+  margin-right: 10px;
+  color: var(--red);
+}
+
+.robot_circle_green {
+  margin-right: 10px;
+  color: var(--green-color);
+}
+
 .robot_propeties {
   padding: 3px 15px 3px 7px;
   color: var(--normal-gray);
@@ -109,8 +120,14 @@
   color: var(--normal-gray);
 }
 
-.paper_profit {
+.paper_profit_green {
   font-weight: bold;
+  color: var(--green-color);
+}
+
+.paper_profit_red {
+  font-weight: bold;
+  color: var(--red);
 }
 
 .paper_type {
