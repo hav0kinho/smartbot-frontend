@@ -2,7 +2,7 @@ import React from "react";
 
 //Styles
 import styles from "./RobotAddIcon.module.css";
-
+/*Componente de Icone que desenha um robô com um + verde ao lado*/
 const RobotAdd = () => {
   return (
     <svg

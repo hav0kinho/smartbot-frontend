@@ -8,10 +8,9 @@ type Props = {
   backgroundColor: string;
 };
 
-const RobotAdd = (props: Props) => {
-  const color = props.color;
-  const backgroundColor = props.backgroundColor;
+/*Componente de Icone que desenha um robô feliz */
 
+const RobotAdd = (props: Props) => {
   return (
     <svg
       width="200"

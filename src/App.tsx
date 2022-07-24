@@ -7,7 +7,7 @@ import Menu from "./components/Menu";
 import Robot from "./components/Robot";
 import RobotAdd from "./components/RobotAdd";
 import RobotList from "./components/RobotList";
-//Skeleton
+//=-=-=-=-=-=-Skeleton=-=-=-=-=-=-
 import RobotSkeleton from "./components/Skeletons/RobotSkeleton";
 import OverviewSkeleton from "./components/Skeletons/OverviewSkeleton";
 import "react-loading-skeleton/dist/skeleton.css";
@@ -17,12 +17,13 @@ import IOverview from "./interfaces/IOverview";
 import RobotModal from "./components/RobotModal";
 
 function App() {
+  //=============================UseStates============================
   const [robotList, setRobotList] = useState<IRobot[]>();
   const [loadingRobots, setLoadingRobots] = useState<boolean>(false);
   const [loadingOverview, setLoadingOverview] = useState<boolean>(false);
   const [overview, setOverview] = useState<IOverview>();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
+  //========================GetRobots================================
   const getRobots = async () => {
     setLoadingRobots(true);
     const response = await fetch(
@@ -33,7 +34,7 @@ function App() {
     setLoadingRobots(false);
     return data;
   };
-
+  //==========================GetRobotsOverview========================
   const getRobotsOverview = async () => {
     setLoadingOverview(true);
     const response = await fetch(
@@ -44,7 +45,7 @@ function App() {
     setLoadingOverview(false);
     return data;
   };
-
+  //==========================Pegar os Dados na API========================
   useEffect(() => {
     getRobots().then((data) => setRobotList(data));
     getRobotsOverview().then((data) => setOverview(data));
@@ -52,12 +53,16 @@ function App() {
 
   return (
     <div className="App">
+      {/*=-=-=-=-=-=-Modal de Cadastro=-=-=-=-=-=-*/}
       {isModalOpen && <RobotModal modalSetter={setIsModalOpen} />}
       <Menu />
+      {/*=-=-=-=-=-=-Skeleton Overview=-=-=-=-=-=-*/}
       {loadingOverview && <OverviewSkeleton />}
+      {/*=-=-=-=-=-=-=-=-Overview=-=-==-=--=-=-=-*/}
       {!loadingOverview && overview && <Overview overviewData={overview} />}
       <RobotAdd robotQtd={3} modalSetter={setIsModalOpen} />
 
+      {/*=-=-=-=-=-Wrapper da lista de robôs=-=-==-=-*/}
       <section className="robot_wrapper">
         {loadingRobots && <RobotSkeleton />}
         {robotList && <RobotList robots={robotList} />}

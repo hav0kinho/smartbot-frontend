@@ -7,6 +7,8 @@ type Props = {
   paperPropeties: IPaper;
 };
 
+//Componente dos papéis negociados no Overview. Aqui ele recebe as informações das ações e renderiza o numero de transações de cada uma.
+//Esse componente normalmente vai ser renderizado utilizando map()
 const Paper = (props: Props) => {
   return (
     <article className={styles.paper_wrapper}>

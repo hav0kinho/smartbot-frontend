@@ -8,7 +8,11 @@ type Props = {
   robotParams: IRobot;
   robotLastPaper: ILastPaper;
 };
-
+{
+  /*Componente dos robôs. Recebe como parâmetro a resposta da API que se refere aos robôs, como a ação que está investindo e o valor da mesma
+    O componente recebe cerca de 13 informações da API, podendo ser vistas nas interfaces acima.
+  */
+}
 const Robot = (props: Props) => {
   const [robotLastPaper] = useState(props.robotLastPaper);
   return (

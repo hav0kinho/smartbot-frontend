@@ -3,6 +3,8 @@ import styles from "./OverviewSkeleton.module.css";
 import Skeleton from "react-loading-skeleton";
 type Props = {};
 
+/*Componente de Skeleton para a "pre-renderização" do resumo de operações/overview */
+
 const OverviewSkeleton = (props: Props) => {
   return (
     <section className={styles.wrapper}>

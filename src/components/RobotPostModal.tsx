@@ -10,6 +10,10 @@ type Props = {
   requestStatus: number;
 };
 
+{
+  /*Componente de Modal que é renderizado quando se recebe a resposta do POST da api. Dependendo da resposta recebida, renderiza uma mensagem
+de sucesso com o icone do robô feliz ou uma mensagem de erro com o icone do robo vermelho */
+}
 const RobotPostModal = (props: Props) => {
   const [sucessColor] = useState("#00b39d");
   const [failedColor] = useState("#ff4501");

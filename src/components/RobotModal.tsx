@@ -10,8 +10,15 @@ import ICreateRobot from "../interfaces/ICreateRobot";
 type Props = {
   modalSetter: React.Dispatch<React.SetStateAction<boolean>>;
 };
-
+{
+  /*Componente do Modal. Esse componente simplesmente é criado quando o usuário clicar no botão do RobotAdd. Aqui é disponibilizado um formulário
+  do qual o usuário pode preencher os dados e assim que "submitar" o formulário será enviado uma requisição do tipo POST para a API, assim
+  criando um novo robô. Ele também recebe a resposta da API e renderiza o RobotPostModal vermelho ou verde dependendo da resposta */
+}
 const RobotModal = (props: Props) => {
+  {
+    /*=-=-=-=-=-=-=-=-=-=-=-=-useStates=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+  }
   const [productName, setProductName] = useState<string>("");
   const [capitalValue, setCapitalValue] = useState<number>(0);
   const [strategy, setStrategy] = useState<string>("");
@@ -22,7 +29,9 @@ const RobotModal = (props: Props) => {
   const [postURL] = useState<string>(
     "https://api-front-test.k8s.smarttbot.com/api/v1/robot"
   );
-
+  {
+    /*=-=-=-=-=-=-=-=-=-=-=-=-HandleSubmit=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+  }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const dataForm: ICreateRobot = {
@@ -53,7 +62,9 @@ const RobotModal = (props: Props) => {
       }
     });
   };
-
+  {
+    /*=-=-=-=-=-=-=-=-=-=-=-=-HandleChange=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+  }
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     switch (e.target.id) {
       case "form_product":
@@ -72,6 +83,10 @@ const RobotModal = (props: Props) => {
         break;
     }
   };
+
+  {
+    /*=-=-=-=-=-=-=-=-=-=-=-=-RETORNO=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+  }
   return (
     <div className={styles.modalBackground}>
       <section className={styles.modalContainer}>

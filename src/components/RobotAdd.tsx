@@ -7,7 +7,10 @@ type Props = {
   robotQtd: Number;
   modalSetter: React.Dispatch<React.SetStateAction<boolean>>;
 };
-
+{
+  /*Esse componente renderiza a seção onde existe o botão para criar mais robôs. Ele trabalha em conjunto com o RobotModal para a renderização
+do formulário */
+}
 const RobotAdd = (props: Props) => {
   const robotQtd = props.robotQtd.toString();
   const [robotQtdText, setRobotQtdText] = useState<String>(robotQtd);

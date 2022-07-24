@@ -4,6 +4,8 @@ type Props = {
   color: string;
 };
 
+/*Componente de Icone que desenha um robô vermelho */
+
 const RobotFailed = (props: Props) => {
   return (
     <svg

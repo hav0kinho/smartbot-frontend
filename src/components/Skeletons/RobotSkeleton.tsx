@@ -4,6 +4,8 @@ import styles from "./RobotSkeleton.module.css";
 
 type Props = {};
 
+/*Componente de Skeleton para a "pre-renderização" dos robôs */
+
 const RobotSkeleton = (props: Props) => {
   return (
     <>

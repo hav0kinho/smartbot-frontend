@@ -8,7 +8,7 @@ import Paper from "./Paper";
 type Props = {
   overviewData: IOverview;
 };
-
+//Componente do Resumo de Operações. Aqui é a "dashboard" do aplicativo, ele recebe as informações do overview da API como parâmetro e renderiza elas. Em geral esse componente não tem muita funcionalidade, já que so exibe informações;
 const Overview = (props: Props) => {
   return (
     <section className={styles.wrapper}>

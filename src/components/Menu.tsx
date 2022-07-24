@@ -2,6 +2,8 @@ import React from "react";
 import { GiNetworkBars } from "react-icons/gi";
 //Style
 import styles from "./Menu.module.css";
+
+//Componente do Menu, onde fica a "navegação" do aplicativo. No caso desse projeto não teve muita interação;
 const Menu = () => {
   return (
     <nav className={styles.wrapper}>

@@ -6,6 +6,10 @@ type Props = {
   robots: IRobot[];
 };
 
+{
+  /*Componente da lista de robôs. Simplesmente ele recebe uma lista de IRobot, que é a interface que representa as informações que o robô precisa
+para se renderizada, e usa o map para renderizar elas de uma vez */
+}
 const RobotList = (props: Props) => {
   return (
     <>
