@@ -52,3 +52,16 @@ Essas informações são renderizadas dependendo do conteúdo, servindo de exemp
 
 ![image](https://user-images.githubusercontent.com/68474584/180854257-0e0f2f47-8d18-4509-a586-5616cf152be0.png)
 
+### Skeletons
+
+![SkeletonLoading](https://user-images.githubusercontent.com/68474584/180855531-93c26c57-a3c5-4c05-91f7-78d787cfeb3f.gif)
+
+##### Robot Skeleton
+
+![RobotSkeleton](https://user-images.githubusercontent.com/68474584/180855893-43347f25-2535-4824-9c46-a724d52d3b04.png)
+
+
+##### Overview Skeleton
+
+![OverviewSkeleton](https://user-images.githubusercontent.com/68474584/180855883-2406df89-e64d-44e2-9233-70d438cee3a3.png)
+
