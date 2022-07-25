@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Desafio SmarttBot - Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto é um site criado para administração dos chamados "Robotic Trades" da empresa SmarttBot.
 
-## Available Scripts
+![exibicaoInicial (1)](https://user-images.githubusercontent.com/68474584/180845261-fed25ffb-19f0-4fe5-ac8a-58695654f619.gif)
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `yarn start`
+Nessa página você pode visualizar a análise geral dos seus investimentos,
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Esse aplicativo é separado por três seções principais, sendo elas:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Seção de Resumo geral
 
-### `yarn test`
+Aqui você pode observar as transações realizadas em cada bolsa junto com o seu número, além de também poder visualizar o resumo de movimentação em R$ e o total de transações realizadas até o momento
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Seção de Criação de robôs
 
-### `yarn build`
+Nessa seção é dado a você a opção de poder criar seus próprios robôs, clicando no botão da seção. Ao ser clicado ele abrirá um "Modal", onde você poderá preencher um formulário colocando informações como o "Nome do Robô", "Capital Inicial" e a estratégia que o robô usará para realização dos trades.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![formulario](https://user-images.githubusercontent.com/68474584/180845291-9285962b-e291-4e87-b1d5-5468814a1461.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Formulário
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Ao enviar o formulário, após um curto espaço de tempo, você receberá a resposta em formato de "Modal" caso o robô tenha sido criado ou não. Dependendo da resposta que você receber, um feedback diferente será exibido, sendo eles um robô verde feliz ou um robô vermelho
 
-### `yarn eject`
+![formularioCriando](https://user-images.githubusercontent.com/68474584/180846253-f5930eef-da6f-4f7c-9922-1ba7c436b208.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Seção de Visualização de robôs
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Nesse modulo você consegue visualizar todos os robôs criados. Os robôs são construidos em cima de cerca de 13 informações vindas da API, sendo elas:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Nome do Robô
+- Estado atual
+- ID
+- Configurações de Trade (3 informações)
+- Última transação (5 informações) / Opcional
+- Saldo diário
+- Trades do Dia
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Robo](https://user-images.githubusercontent.com/68474584/180846970-5c191a0b-fec0-4e02-b773-bb889460a72d.png)
 
-## Learn More
+![RoboPropriedades](https://user-images.githubusercontent.com/68474584/180848263-876dcdf9-c387-4e1d-919b-a45224609e0e.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Essas informações são renderizadas dependendo do conteúdo, servindo de exemplos caso o robô está ativo ou não, ou caso o saldo tenha sido positivo ou negativo
