@@ -64,56 +64,76 @@ const Robot = (props: Props) => {
           </span>
         </div>
       </div>
-      <div
-        className={
-          styles.basic_flex +
-          " " +
-          styles.space_between +
-          " " +
-          styles.robot_last_paper
-        }
-      >
-        {/*PAPER INFORMATIONS */}
-        <div className={styles.basic_flex}>
-          <div className={styles.paper_position}>
-            <span>
-              <>{props.robotLastPaper?.position}</>
-            </span>
-          </div>
-          <div>
-            <div className={styles.paper_name}>
+      {/*PAPER WRAPPER - Caso exista informação do lastPaper*/}
+      {robotLastPaper && (
+        <div
+          className={
+            styles.basic_flex +
+            " " +
+            styles.space_between +
+            " " +
+            styles.robot_last_paper
+          }
+        >
+          {/*PAPER INFORMATIONS - Em manuntenção */}
+          <div className={styles.basic_flex}>
+            <div className={styles.paper_position}>
               <span>
-                <>{props.robotLastPaper?.paper}</>
+                <>{props.robotLastPaper?.position}</>
               </span>
             </div>
-            <div className={styles.paper_type}>
-              <span>
-                <>{props.robotLastPaper?.type === 0 ? "Compra" : "Venda"}</>
-              </span>
+            <div>
+              <div className={styles.paper_name}>
+                <span>
+                  <>{props.robotLastPaper?.paper}</>
+                </span>
+              </div>
+              <div className={styles.paper_type}>
+                <span>
+                  <>{props.robotLastPaper?.type === 0 ? "Compra" : "Venda"}</>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        {/*PAPER VALUES */}
-        <div className={styles.paper_values}>
-          <div>
-            <span className={styles.paper_value}>
-              <>{props.robotLastPaper?.paper_value}</>
-            </span>
+          <div className={styles.paper_values}>
+            <div>
+              <span className={styles.paper_value}>
+                <>{props.robotLastPaper?.paper_value}</>
+              </span>
+            </div>
+            <div>
+              <span
+                className={
+                  props.robotLastPaper?.profit >= 0
+                    ? styles.paper_profit_green
+                    : styles.paper_profit_red
+                }
+              >
+                <span>{props.robotLastPaper?.profit >= 0 ? "▲" : "▼"}</span>
+                <>{props.robotLastPaper?.profit}</>
+              </span>
+            </div>
+            {/*Normal Paper value*/}
           </div>
-          <div>
-            <span
-              className={
-                props.robotLastPaper?.profit >= 0
-                  ? styles.paper_profit_green
-                  : styles.paper_profit_red
-              }
-            >
-              <span>{props.robotLastPaper?.profit >= 0 ? "▲" : "▼"}</span>
-              <>{props.robotLastPaper?.profit}</>
-            </span>
-          </div>
         </div>
-      </div>
+      )}
+      {/*Caso não exista informação do lastPaper*/}
+      {!robotLastPaper && (
+        <div
+          className={
+            styles.basic_flex +
+            " " +
+            styles.space_between +
+            " " +
+            styles.robot_last_paper
+          }
+        >
+          <h2 className={styles.lastPaperErrorMessage}>
+            Não há informações da última transação
+          </h2>
+        </div>
+      )}
+
       {/*FOOTER VALUES */}
       <div className={styles.basic_flex + " " + styles.space_between}>
         <div className={styles.daily_balance}>
