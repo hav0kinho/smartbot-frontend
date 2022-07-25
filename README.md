@@ -24,6 +24,8 @@ Nessa seção é dado a você a opção de poder criar seus próprios robôs, cl
 
 Ao enviar o formulário, após um curto espaço de tempo, você receberá a resposta em formato de "Modal" caso o robô tenha sido criado ou não. Dependendo da resposta que você receber, um feedback diferente será exibido, sendo eles um robô verde feliz ou um robô vermelho
 
+##### Requisição bem-sucedida
+
 ![formularioCriando](https://user-images.githubusercontent.com/68474584/180846253-f5930eef-da6f-4f7c-9922-1ba7c436b208.gif)
 
 ##### Requisição falha
