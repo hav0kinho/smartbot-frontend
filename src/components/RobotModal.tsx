@@ -40,7 +40,7 @@ const RobotModal = (props: Props) => {
     setIsPosting(true);
     await fetch(postURL, {
       method: "POST",
-      body: JSON.stringify({ mensagemAjuda: "Hello?" }),
+      body: JSON.stringify(dataForm),
       headers: {
         "Content-Type": "application/json",
       },
