@@ -49,3 +49,6 @@ Nesse modulo você consegue visualizar todos os robôs criados. Os robôs são c
 ![RoboPropriedades](https://user-images.githubusercontent.com/68474584/180848263-876dcdf9-c387-4e1d-919b-a45224609e0e.png)
 
 Essas informações são renderizadas dependendo do conteúdo, servindo de exemplos caso o robô está ativo ou não, ou caso o saldo tenha sido positivo ou negativo
+
+![image](https://user-images.githubusercontent.com/68474584/180854257-0e0f2f47-8d18-4509-a586-5616cf152be0.png)
+
