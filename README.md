@@ -26,6 +26,8 @@ Ao enviar o formulário, após um curto espaço de tempo, você receberá a resp
 
 ![formularioCriando](https://user-images.githubusercontent.com/68474584/180846253-f5930eef-da6f-4f7c-9922-1ba7c436b208.gif)
 
+##### Requisição falha
+
 ### Seção de Visualização de robôs
 
 Nesse modulo você consegue visualizar todos os robôs criados. Os robôs são construidos em cima de cerca de 13 informações vindas da API, sendo elas:
