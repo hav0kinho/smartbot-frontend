@@ -28,6 +28,8 @@ Ao enviar o formulário, após um curto espaço de tempo, você receberá a resp
 
 ##### Requisição falha
 
+![FailPost](https://user-images.githubusercontent.com/68474584/180853860-d25212e0-4c1d-4e91-b507-006bdff256c6.gif)
+
 ### Seção de Visualização de robôs
 
 Nesse modulo você consegue visualizar todos os robôs criados. Os robôs são construidos em cima de cerca de 13 informações vindas da API, sendo elas:
