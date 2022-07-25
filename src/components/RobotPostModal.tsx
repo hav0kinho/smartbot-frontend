@@ -23,20 +23,22 @@ const RobotPostModal = (props: Props) => {
         {props.requestStatus === 200 ? (
           <RobotSucess color={sucessColor} backgroundColor="white" />
         ) : (
-          <RobotSucess color={failedColor} backgroundColor="white" />
+          <RobotFailed color={failedColor} backgroundColor="white" />
         )}
       </div>
       <div>
-        <h2 className={props.requestStatus === 200 ? styles.green : styles.red}>
-          Robô criado com sucesso
-        </h2>
+        {props.requestStatus === 200 ? (
+          <h2 className={styles.green}>Robô criado com sucesso</h2>
+        ) : (
+          <h2 className={styles.red}>Ops.. algo deu errado!</h2>
+        )}
       </div>
       <div className={styles.buttonWrapper}>
         <button
           className={
             props.requestStatus === 200
               ? styles.continueButtonGreen
-              : styles.red
+              : styles.continueButtonRed
           }
           onClick={() => {
             props.popupSetter(false);

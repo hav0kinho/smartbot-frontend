@@ -1,7 +1,8 @@
 import React from "react";
-
+import styles from "./RobotFailed.module.css";
 type Props = {
   color: string;
+  backgroundColor: string;
 };
 
 /*Componente de Icone que desenha um robô vermelho */
@@ -9,8 +10,9 @@ type Props = {
 const RobotFailed = (props: Props) => {
   return (
     <svg
-      width="300"
-      height="300"
+      className={styles.svg}
+      width="200"
+      height="200"
       viewBox="0 0 37 20"
       xmlns="http://www.w3.org/2000/svg"
     >
